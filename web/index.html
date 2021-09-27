@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Book Shop</title>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!------ Include the above in your HEAD tag ---------->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="Home.jsp">Books</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Login.jsp">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+
+                    <form action="#" method="post" class="form-inline my-2 my-lg-0">
+                        <div class="input-group input-group-sm">
+                            <input name="txt" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-secondary btn-number">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <a class="btn btn-success btn-sm ml-3" href="show">
+                            <i class="fa fa-shopping-cart"></i> Cart
+                            <span class="badge badge-light">3</span>
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1 class="jumbotron-heading">Cửa Hàng Bán Sách Chất Lượng Số Một Việt Nam</h1>
+                <p class="lead text-muted mb-0">Uy tín tạo nên thương hiệu</p>
+            </div>
+        </section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="Home.jsp">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Category</a></li>
+                            <li class="breadcrumb-item active" aria-current="#">Sub-category</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="card bg-light mb-3">
+                        <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Categories</div>
+                        <ul class="list-group category_block">
+                            <li class="list-group-item text-white"><a href="#">SÁCH THAM KHẢO</a></li>
+                            <li class="list-group-item text-white"><a href="#">SÁCH VĂN HỌC</a></li>
+                            <li class="list-group-item text-white"><a href="#">SÁCH KINH TẾ</a></li>
+                            <li class="list-group-item text-white"><a href="#">SÁCH THIẾU NHI</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+
+                <div class="col-sm-9">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card">
+                                <img class="card-img-top" src="https://salt.tikicdn.com/cache/280x280/ts/product/3b/e0/1c/7fd74b62c64de9bdce73b7269cd09266.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title show_txt"><a href="#" title="View Product">Sách Từ Vựng Tiếng Anh</a></h4>
+                                    <p class="card-text show_txt">Sách Từ Vựng Tiếng Anh</p>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="btn btn-danger btn-block">100 $</p>
+                                        </div>
+                                        <div class="col">
+                                            <a href="cart?id=${o.id}" class="btn btn-success btn-block">Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card">
+                                <img class="card-img-top" src="https://salt.tikicdn.com/cache/w444/ts/product/65/f8/89/6a47e3c50b83d1b5bf2593a3803aa708.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title show_txt"><a href="#" title="View Product">Sách Giải Toán 6</a></h4>
+                                    <p class="card-text show_txt">Sách Giải Toán 6</p>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="btn btn-danger btn-block">100 $</p>
+                                        </div>
+                                        <div class="col">
+                                            <a href="cart?id=${o.id}" class="btn btn-success btn-block">Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card">
+                                <img class="card-img-top" src="https://salt.tikicdn.com/cache/w1200/ts/product/83/30/87/737846efdb9f28f0f51352cacf9225c5.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title show_txt"><a href="#" title="View Product">Sách Nhà Giả Kim</a></h4>
+                                    <p class="card-text show_txt">Sách Nhà Giả Kim</p>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="btn btn-danger btn-block">100 $</p>
+                                        </div>
+                                        <div class="col">
+                                            <a href="cart?id=${o.id}" class="btn btn-success btn-block">Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card">
+                                <img class="card-img-top" src="https://salt.tikicdn.com/cache/w1200/ts/product/3d/48/33/94b39d773b28290e9f4ed1daa53449eb.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title show_txt"><a href="#" title="View Product">Sách Ngày Đòi Nợ</a></h4>
+                                    <p class="card-text show_txt">Sách Ngày Đòi Nợ</p>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="btn btn-danger btn-block">100 $</p>
+                                        </div>
+                                        <div class="col">
+                                            <a href="cart?id=${o.id}" class="btn btn-success btn-block">Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card">
+                                <img class="card-img-top" src="https://salt.tikicdn.com/cache/w444/ts/product/9d/7f/a3/7927ca0b1f94ac14652ebdfbd3c54de4.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title show_txt"><a href="#" title="View Product">Sách Siêu Nhí Hỏi</a></h4>
+                                    <p class="card-text show_txt">Sách Siêu Nhí Hỏi</p>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="btn btn-danger btn-block">100 $</p>
+                                        </div>
+                                        <div class="col">
+                                            <a href="cart?id=${o.id}" class="btn btn-success btn-block">Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card">
+                                <img class="card-img-top" src="https://tictak.com.vn/uploads/cache/san-pham/2021/0330/12586/tictakbook-16171026206946-380x380.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title show_txt"><a href="#" title="View Product">Sách Vui Vẻ Không Quạu</a></h4>
+                                    <p class="card-text show_txt">Sách Vui Vẻ Không Quạu</p>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="btn btn-danger btn-block">100 $</p>
+                                        </div>
+                                        <div class="col">
+                                            <a href="cart?id=${o.id}" class="btn btn-success btn-block">Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-lg-4 col-xl-3">
+                        <h5>About</h5>
+                        <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                        <p class="mb-0">
+                           
+                        </p>
+                    </div>
+
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+                        <h5>Informations</h5>
+                        <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                        <ul class="list-unstyled">
+                            <li><a href="">Link </a></li>
+                            <li><a href="">Link </a></li>
+                            <li><a href="">Link </a></li>
+                            <li><a href="">Link </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto">
+                        <h5>Others links</h5>
+                        <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                        <ul class="list-unstyled">
+                            <li><a href="">Link </a></li>
+                            <li><a href="">Link </a></li>
+                            <li><a href="">Link </a></li>
+                            <li><a href="">Link </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4 col-lg-3 col-xl-3">
+                        <h5>Contact</h5>
+                        <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                        <ul class="list-unstyled">
+                            <li><i class="fa fa-home mr-2"></i>Tiki company</li>
+                            <li><i class="fa fa-envelope mr-2"></i> hungtmse150230@fpt.edu.vn</li>
+                            <li><i class="fa fa-phone mr-2"></i> + 11 22 33</li>
+                            <li><i class="fa fa-print mr-2"></i> + 11 22 33</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 copyright mt-3">
+                        <p class="float-left">
+                            <a href="#">Back to top</a>
+                        </p>
+                        <p class="text-right text-muted">created with <i class="fa fa-heart"></i> by <a href="https://t-php.fr/43-theme-ecommerce-bootstrap-4.html"><i>t-php</i></a> | <span>v. 1.0</span></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
